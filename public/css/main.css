@@ -1,0 +1,257 @@
+body{
+    background-color: rgb(0, 0, 0);
+    min-height:100vh;
+    width: 100%;
+    font-family: Roboto,Arial;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: relative;
+    overflow-x: hidden;
+    margin:0;
+}
+
+.sidebar{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(42, 1, 88);
+    height: 100%;
+    width: 300px;
+    align-items: center;
+    border-style: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.title{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.line{
+    margin-top:40px ;
+    margin-bottom: 40px;
+    position: relative;
+    width:80% ;
+}
+.nav{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    cursor:pointer;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.link:hover{
+    color: rgb(255, 244, 38);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.983), 0 0 20px rgba(255, 255, 255, 0.431);
+    transition: 0.2s;
+}
+.account{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+}
+.profile{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color:rgb(0, 0, 0);
+    border-radius: 40px;
+    margin-right: 15px;
+}
+.profile-name{
+    display: inline-block;
+    color: white;
+}
+.log-out{
+    margin-top: 50px;    
+    margin-right:15px;
+    margin-bottom: 50px;
+}
+
+.main{
+    margin-left: 350px;
+    width: calc(98% - 350px);
+    box-sizing: border-box;
+    padding-bottom: 100px;
+}
+.top{
+    margin-top: 25px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.search-bar-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 600px;
+}
+.search-bar{
+    display: flex;
+    border-radius: 10px;
+    width: 300px;
+    border-style: none;
+    outline: none;
+}
+.fa-solid.fa-magnifying-glass{
+    cursor: pointer;
+}
+
+/* Car listing grid */
+.cars-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+.car-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(25% - 25px); /* 4 per row */
+    min-width: 220px;
+    transition: transform 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+.car-card:hover {
+    transform: scale(1.02);
+}
+.car-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.car-info {
+    padding: 12px;
+}
+.car-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.car-price {
+    font-size: 20px;
+    color: #8B1A1A;
+    font-weight: bold;
+}
+.fa-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 2;
+}
+.fa-regular.fa-heart {
+    color: rgb(255, 255, 64);
+}
+.fa-solid.fa-heart {
+    color: red;
+}
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pagination a, .pagination span {
+    padding: 8px 16px;
+    background-color: #2a0158;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.pagination a:hover {
+    background-color: #8B1A1A;
+}
+.pagination .active span {
+    background-color: #8B1A1A;
+}
+
+/* Admin table and forms (unchanged from original) */
+.admintext{
+    margin-top: 80px;
+    font-size:30px;
+}
+.titlediv{ 
+    display:flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom:80px;    
+}
+.titleadmin{
+    font-size:30px;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+.titleinput{
+    display: inline-block;
+    width: 300px;
+    height: 20px;
+    outline:none;
+    cursor:pointer;
+}
+.titleselect{
+    width: 300px;
+    height: 30px;
+    cursor:pointer;
+    outline:none;
+}
+.adminbutton{
+    padding:10px;
+    margin-right:40px;
+    border-style:none;
+    background-color: rgb(255, 244, 38);
+    font-size:20px;
+    border-radius:6px;
+    cursor:pointer;
+    color:black;
+}
+.adminbutton1{
+    padding:10px;
+    margin-right:40px;
+    border-style:none;
+    background-color: rgb(241, 71, 59);
+    font-size:20px;
+    border-radius:6px;
+    cursor:pointer;
+    color:black;
+}
+.admintable{
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color:white;
+    background-color: rgb(42, 1, 88);
+    border:1px solid white;
+}
+.tid,.titleid,.ttype,.turl,.tgenre,.tactions{
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .sidebar { width: 220px; font-size: 20px; }
+    .main { margin-left: 250px; width: calc(98% - 170px); }
+    .car-card { width: calc(50% - 25px); }
+    .search-bar-container { width: 80%; }
+    .action-picture { height: 200px; }
+}
+@media(max-width: 600px) {
+    .car-card { width: 100%; }
+    .main { margin-left: 0; width: 95%; padding-top: 20px; }
+    .sidebar { display: none; } /* optional collapse */
+}
